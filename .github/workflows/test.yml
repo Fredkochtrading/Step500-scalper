@@ -1,0 +1,7 @@
+name: Test alert
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -H "Title: Step 500 test" -d "Alerts work" https://ntfy.sh/${{ secrets.NTFY_TOPIC }}
